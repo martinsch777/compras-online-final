@@ -1,0 +1,73 @@
+// Definir variables para colores y fuentes
+$primary-color: #28a745;
+$secondary-color: #f8f9fa;
+$text-color: #b4b4b4;
+$highlight-color: #88b192;
+$white: white;
+$dark-text: rgba(0, 0, 0, 0.7);
+$shadow-color: rgba(0, 0, 0, 0.1);
+
+// Estilos generales
+body {
+    font-family: Arial, sans-serif;
+    background-color: $secondary-color;
+}
+
+// Estilo del navbar
+.navbar {
+    background-color: $primary-color;
+}
+
+// Estilo de los cuadros de categorías
+.category-box {
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    text-shadow: 2px 2px 4px $dark-text;
+    box-shadow: 0 4px 6px $shadow-color;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+    // Estilo al pasar el ratón
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    // Estilo del texto dentro de los cuadros
+    h3 {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: overlay;
+}
+
+// Estilos dentro de los contenedores
+.container {
+    h4 {
+        font-size: 28px;
+        font-weight: bold;
+        color: $highlight-color;
+    }
+
+    p {
+        font-size: 16px;
+        color: $text-color;
+    }
+}
+
+// Efecto hover en los items de las listas
+ul li {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  
+    &:hover {
+      transform: scale(1.05); /* Aumentar ligeramente el tamaño del item */
+    }
+  }
+  
