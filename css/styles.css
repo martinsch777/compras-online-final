@@ -13,7 +13,7 @@ body {
   background-position: center;
   height: 500px;
   border-radius: 10px;
-  display: flex;
+  display: grid;
   justify-content: center;
   align-items: center;
   color: white;
@@ -22,6 +22,8 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   background-color: rgba(0, 0, 0, 0.3);
   background-blend-mode: overlay;
+  grid-template-columns: 1fr;
+  gap: 10px;
 }
 .category-box:hover {
   transform: translateY(-10px);
@@ -50,3 +52,20 @@ ul li:hover {
 }
 
 /*# sourceMappingURL=styles.css.map */
+
+@media screen and (max-width: 600px) {
+  .secciones-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+.producto {
+  display: none;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.producto:target {
+  display: block;
+}
